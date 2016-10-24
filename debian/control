@@ -1,0 +1,25 @@
+Source: rinse
+Maintainer: Thomas Lange <lange@debian.org>
+Section: admin
+Priority: extra
+Standards-Version: 3.9.5
+Build-Depends: debhelper (>= 7)
+Homepage: http://collab-maint.alioth.debian.org/rinse/
+Vcs-Git: git://anonscm.debian.org/collab-maint/rinse.git
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/rinse.git
+
+Package: rinse
+Architecture: all
+Depends: wget, libterm-size-perl, libwww-perl, perl, rpm, cpio (>= 2.11+dfsg-4.1)
+Description: RPM installation environment
+ This is a tool for bootstrapping a basic RPM-based distribution of
+ GNU/Linux.
+ .
+ It is comparable in purpose to the standard Debian debootstrap utility,
+ but works upon RPM-based distributions instead.
+ .
+ Rinse can setup 32 and 64-bit installations of:
+  * CentOS
+  * Scientific Linux CERN
+  * Fedora
+  * OpenSUSE

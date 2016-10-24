@@ -1,0 +1,16 @@
+#!/usr/bin/make -f
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+%:
+	dh $@
+
+override_dh_auto_test:
+
+override_dh_install: build
+
+	dh_testdir
+	dh_testroot
+	dh_prep
+	make install PREFIX=`pwd`/debian/rinse
+	dh_installdirs
